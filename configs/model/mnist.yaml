@@ -14,9 +14,7 @@ scheduler:
   patience: 10
 
 net:
-  _target_: src.models.components.simple_dense_net.SimpleDenseNet
+  _target_: src.models.components.multi_layer_perceptron.MultiLayerPerceptron
   input_size: 784
-  lin1_size: 64
-  lin2_size: 128
-  lin3_size: 64
+  hidden_size: [256, 256, 256]
   output_size: 10
